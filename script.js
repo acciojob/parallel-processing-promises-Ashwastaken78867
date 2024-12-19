@@ -20,10 +20,11 @@ btn.addEventListener("click", () => {
   output.textContent = "Loading images...";
   Promise.all(images.map(loadImage))
     .then((loadedImages) => {
-      output.textContent = ""; // Clear the loading message
+      output.textContent = "";
       loadedImages.forEach((img) => output.appendChild(img));
     })
     .catch((error) => {
-      output.textContent = error; // Show error message if any image fails
+      output.textContent = error;
     });
 });
+
