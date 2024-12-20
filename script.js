@@ -16,7 +16,7 @@ function loadImage(image) {
   });
 }
 
-btn.addEventListener("click", () => {
+download-images-button.addEventListener("click", () => {
   output.textContent = "Loading images...";
   Promise.all(images.map(loadImage))
     .then((loadedImages) => {
